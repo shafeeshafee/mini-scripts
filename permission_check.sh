@@ -19,8 +19,9 @@
 # todo: assume file doesn't exist, make a check for that
 filename='sample.txt'
 
-# If file is readable add 4 to counter
-if [ -r "$filename" ]; then
-    echo "File is readable"
-    counter=$((counter + 4))
-fi
+counter=0
+[ -r "$filename" ] && counter=$((counter + 4))
+[ -w "$filename" ] && counter=$((counter + 2))
+[ -x "$filename" ] && counter=$((counter + 1))
+
+echo "Permission level: $counter"
