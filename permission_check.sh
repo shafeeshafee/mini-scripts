@@ -17,6 +17,7 @@
 # If file is executeable, add 1 to counter 
 
 # todo: assume file doesn't exist, make a check for that
+# todo: don't hardcode filename, get input from user
 filename='sample.txt'
 
 counter=0
