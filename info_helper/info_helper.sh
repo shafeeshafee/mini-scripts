@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Purpose: script providing a terminal menu for retrieving system info: IP (private and public), user, CPU, memory, top processes in either CPU or memory, and network connectivity.
+
 Public_IP="Public IP"
 Private_IP="Private IP"
 Current_User="The current user"
