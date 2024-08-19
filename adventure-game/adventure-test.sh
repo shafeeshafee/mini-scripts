@@ -120,9 +120,9 @@ dragonriding() {
     dragon_choice=$(get_valid_input "Enter your choice (1-3): " 3)
 
     case $dragon_choice in
-        1) echo -e "\nNaar, the fire dragon, roars a puff of smoke as you approach. You climb on, and he takes off with a fierce howl!" ;;
-        2) echo -e "\nAzulon, the ice dragon, is quiet and reserved. You mount Azulon and she soars into the sky with incredible speed!" ;;
-        3) echo -e "\nSteindaar gives a large roar before you hop on. He's known to be the most aggressive of all the three. He notices Gecko standing by, then bows its head as you near. You climb on gripping his shiny golden scales, and it gracefully lifts off!" ;;
+        1) echo "Naar, the fire dragon, roars a puff of smoke as you approach. You climb on, and he takes off with a fierce howl!" ;;
+        2) echo "Azulon, the ice dragon, is quiet and reserved happily. You mount Azulon and she soars into the sky with incredible speed!" ;;
+        3) echo "Steindaar gives a large roar before you hop on. He's known to be the most aggressive of all the three. He notices Gecko standing by, then bows its head as you near. You climb on gripping his shiny golden scales, and it gracefully lifts off!" ;;
     esac
     
     echo -e "\nAs you soar through the skies, you realize this is absolutely mindblowing. Who back home would ever believe this?! You're flying a dragon! This is just the beginning of your magical adventures."
@@ -154,8 +154,8 @@ cicd_pipeline() {
 
 monitoring_system() {
     newline
-    echo -e "\nYou start implementing a new monitoring system with CloudWatch, as well as Prometheus and Grafana for some external services, setting up alerts and dashboards."
-    echo -e "\nAfter some time passes by, you finish setting them up and feel great. Now things are being monitored for crashes, network and security issues, and the like."
+    echo "You start implementing a new monitoring system with CloudWatch, as well as Prometheus and Grafana for some external services, setting up alerts and dashboards."
+    echo "After some time passes by, you finish setting them up and feel great. Now things are being monitored for crashes, network and security issues, and the like."
     echo -e "You yawn and stretch as you close for the day. Looking over to the alert dashboard once more and notice something peculiar. Seeing the graph over the past 3 hours show a sudden spike in activity, your brow furrows. The pattern doesn't resemble any typical trend — instead, it almost looks like... text? Mysterious and seemingly random, the spikes seem to be forming some sort of message. You lean in closer, trying to make sense of it.\n"
 
     echo "As you look deeper, the text resembles these words: Perception is prone to the wizard soul."
