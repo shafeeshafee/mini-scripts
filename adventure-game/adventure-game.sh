@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Display the introductory story
 echo -e "Somewhere near a smoky mountaintop, there lived a wizard who was known as 'Gecko the Firemaker', or simply Gecko. \n
 
 Gecko was 3,395 years old and had seen it all. Throughout the three millenia he lived, he looked for weary souls to teach the art of magic to. It didn't matter how old, what walk of life, or the color of their toenail. But whoever he chose, there was a certain fire within that individual that could shine up the entire earth--that is, if they so wished!\n
@@ -13,12 +14,14 @@ Is this danger? Or is this mere hallucination?\n
 
 ...\n"
 
+# Print a separator line
 newline() {
     echo -e "\n"
     echo "=============================================="
     echo -e "\n"
 }
 
+# Get valid input from the user
 get_valid_input() {
     local prompt="$1"
     local max_choice="$2"
@@ -35,6 +38,7 @@ get_valid_input() {
     done
 }
 
+# Main function to start the game
 protagonist() {
     echo "1.) Ask who they are."
     echo -e "2.) Run away as fast as possible.\n"
@@ -46,6 +50,7 @@ protagonist() {
     esac
 }
 
+# Handle the scenario where the player asks who the wizard is
 who_are_they() {
     newline
     echo -e "You ask  him, \"W-who are you?!\n"
@@ -69,6 +74,7 @@ who_are_they() {
     fi
 }
 
+# Handle the scenario where the player runs away. (Fast ending)
 run_away() {
     newline
     echo -e "You run away, retracing your steps to the entrance of the hike, grab your car and drive home.\n"
@@ -78,6 +84,7 @@ run_away() {
     newline
 }
 
+# Handle the wizard's offer
 wizard_offer() {
     newline
     echo "Welcome to The Firesmith, $USER! Gecko leads you through Grand Mage Halls filled with floating books and shimmering portals. The place is a giant, like a hundred castles but as one."
@@ -92,6 +99,7 @@ wizard_offer() {
     esac
 }
 
+# Handle elemental magic training choice
 elemental_magic() {
     newline
     echo "Gecko takes you to a chamber with swirling elements. \"Focus your mind and choose an element to bend to your will.\""
@@ -111,6 +119,7 @@ elemental_magic() {
     echo -e "\nGecko says to you: Well done, well done! You've taken your first step into the world of magic. Your journey as a wizard has just begun!"
 }
 
+# Handle dragonriding training choice
 dragonriding() {
     newline
     echo -e "Gecko walks with you to a vast field where several dragons are lounging. \"Choose your dragon,\" he says.\n"
@@ -128,6 +137,7 @@ dragonriding() {
     echo -e "\nAs you soar through the skies, you realize this is absolutely mindblowing. Who back home would ever believe this?! You're flying a dragon! This is just the beginning of your magical adventures."
 }
 
+# Function to handle the DevOps job offer
 devops_offer() {
     newline
     echo "You arrive at Amazon HQ for your first day as a DevOps engineer. Your manager greets you:"
@@ -142,6 +152,7 @@ devops_offer() {
     esac
 }
 
+# Handle the CI/CD pipeline task choice
 cicd_pipeline() {
     newline
     echo "You begin optimizing Amazon's CI/CD pipeline on the Customers service, streamlining processes and eliminating bottlenecks."
@@ -152,6 +163,7 @@ cicd_pipeline() {
     echo "You realize on your code editor as you scroll down, there is an ASCII art of a wizard hat. What the--?"
 }
 
+# Handle the monitoring system task choice
 monitoring_system() {
     newline
     echo -e "\nYou start implementing a new monitoring system with CloudWatch, as well as Prometheus and Grafana for some external services, setting up alerts and dashboards."
@@ -161,4 +173,5 @@ monitoring_system() {
     echo "As you look deeper, the text resembles these words: Perception is prone to the wizard soul."
 }
 
+# Start the game!
 protagonist
