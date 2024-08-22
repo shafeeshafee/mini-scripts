@@ -1,5 +1,7 @@
-### Work-in-progress README
+*Work-in-progress README*
 
-#### Mini-scripts is a collection of small scripts.
+## `mini-scripts` is a collection of small scripts.
 
-#### Many of these are one-off scripts, some for daily use, and others for specific use cases.
+This is mostly to have a store for practicing Bash scripting.
+
+Many of these are one-off scripts, some for daily use, and others for specific use cases.
