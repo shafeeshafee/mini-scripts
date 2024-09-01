@@ -1,13 +1,21 @@
 #!/bin/bash
 
+# Purpose: Checks if a file exists, gives file size.
+
 echo "Welcome. Let's check if a filename exists."
-read -p "Please enter a filename: " user_input
 
-initial_file_size_kb=$(du -k "$user_input" | cut -f 1)
-file_size_mb=$((initial_file_size_kb / 1000))
+filename=$1
 
-if [[ -f "$user_input" ]]; then
-    echo "File exists, its size is $file_size_mb megabytes."
+if [[ -f "$filename" ]]; then
+    file_size=$(du -k "$filename" | cut -f 1)
+    
+    if [ $file_size -gt 999 ]; then
+        file_size_in_mb=$(echo "scale=1; $file_size / 1000" | bc)
+        echo "File size is ${file_size_in_mb} megabytes."
+    elif [ $file_size -lt 1000 ]; then
+        echo  "File size is $file_size kilobytes."
+    fi
+
 else
-    echo "doesn't exist"
+    echo "File does not exist."
 fi
