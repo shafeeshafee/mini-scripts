@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Purpose: script to check if a URL is reachable and print its HTTP status code.
+
+
 # save user input URL a variable
 url=$1
 
