@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Purpose: script that looks for empty files and directories and deletes them based on the user's choice. 
+
 # arrays to store empty files and folders
 empty_files=()
 empty_dirs=()
