@@ -6,14 +6,14 @@
 # find searches bash files in command substitution. Find only in /home/ubuntu
 # for loop will go through each bash item found in `find`'s result
 
-for file in $(find /home/ubuntu/ -name "*.sh" -type f 2>dev>null); do
-    # if the file already has execution rights, we don't do anything. But if it doesn't, notify the user, then chmod +x it.
+for file in $(find /home/ubuntu/ -name "*.sh" -type f 2>/dev/null); do
+    # If the file doesn't have execution rights, notify the user, then chmod +x it.
     if [ ! -x "$file" ]; then
-        echo -e "Found bash file that needs x rights...\n"
+        echo "Found bash file that needs execution rights: $file"
         chmod +x "$file"
-        echo -e "\nMade $file executable!"
+        echo "Made $file executable!"
     fi
-done        
+done   
         
 
 
