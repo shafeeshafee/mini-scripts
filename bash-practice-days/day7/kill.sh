@@ -4,9 +4,7 @@
 
 echo "Hello. Here are all the processes that are running..."
 
-ps -e -o pid,comm
-
-echo -e "\n"
+ps -e -o pid,comecho -e "\n"
 
 # Prompt the user and store the input in user_choice
 read -p "Please select a process you want to end (by PID): " user_choice
