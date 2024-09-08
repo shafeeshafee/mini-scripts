@@ -4,8 +4,6 @@
 
 # Notes:
 
-# command is a way to get to the true system command, so it bypasses any other created commands with the same name.
-
 # dpkg-query (debian/ubuntu only). This command lets you query the package database. It's as if you're asking the system about what's installed in it.
 # dpkg-query flags:
 # - W tells dpkg-query to show info about packages
