@@ -1,7 +1,15 @@
-*Work-in-progress README*
+# sysops-scripts
 
-## `mini-scripts` is a collection of small scripts.
+![banner](sys-ops.png)
 
-This is mostly to have a store for practicing Bash scripting.
+A collection of practical Bash scripts that I found useful. Tailored for general use, helpful for sysadmin and DevOps tasks.
 
-Many of these are one-off scripts, some for daily use, and others for specific use cases.
+**Major categories**:
+
+- **file-maintenance/** : Scripts to manage local files, e.g. checking backups, removing empty items.
+- **log-tools/** : Scripts to analyze logs or generate test logs.
+- **monitoring/** : Scripts for system monitoring, e.g. CPU, Jenkins, processes.
+- **net-utils/** : Network-related scripts like URL reachability checks.
+- **process-utils/** : Managing processes (e.g. kill by PID).
+- **system-utils/** : Various system info scripts, package checks, user management, etc.
+- **scratch-area/** : Misc or experimental scripts, not necessarily for production.
